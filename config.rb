@@ -13,7 +13,7 @@ activate :blog do |blog|
   blog.sources = "articles/{year}-{month}-{day}-{title}.html"
   blog.taglink = "tag/{tag}.html"
   # blog.layout = "layout"
-  # blog.summary_separator = /(READMORE)/
+  blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
@@ -31,20 +31,20 @@ end
 
 set :casper, {
   blog: {
-    url: 'http://www.example.com',
-    name: 'Middleman',
-    description: 'Makes developing websites simple.',
+    url: 'http://grantammons.me',
+    name: 'Grant Ammons',
+    description: 'My thoughts as a developer and engineering leader',
     date_format: '%d %B %Y',
     navigation: true,
     logo: nil # Optional
   },
   author: {
-    name: 'Middleman',
+    name: 'Grant Ammons',
     bio: nil, # Optional
-    location: nil, # Optional
+    location: 'Philly', # Optional
     website: nil, # Optional
-    gravatar_email: nil, # Optional
-    twitter: nil # Optional
+    gravatar_email: 'gammons@gmail.com', # Optional
+    twitter: 'gammons' # Optional
   },
   navigation: {
     "Home" => "/"
@@ -147,4 +147,11 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+  set :disqus_shortname, "theblogofgrantammons"
+  set :url_root, 'http://grantammons.me'
+end
+
+configure :development do
+  set :disqus_shortname, "theblogofgrantammons_dev"
+  set :url_root, 'http://localhost'
 end
