@@ -2,6 +2,7 @@
 title: Where the logic hides in Rails apps
 date: 2012-12-22 11:05 UTC
 tags: architecture
+layout: post
 ---
 
 DHH recently authored a [SVN blog post](http://37signals.com/svn/posts/3372-put-chubby-models-on-a-diet-with-concerns) that advocated breaking up fat models into separate mixins that would live in a new directory in the rails structure, app/concerns.
