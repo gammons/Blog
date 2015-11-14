@@ -3,7 +3,7 @@ title: Resources to help guide architectural decisions in Rails apps
 date: 2013-12-23 14:11 UTC
 tags: architecture
 layout: post
-cover: computer.jpg
+cover: brutalism.jpg
 ---
 
 My [previous
