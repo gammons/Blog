@@ -16,6 +16,7 @@ An object is said to depend on another object in the following scenarios:
 
 The first is quite easy to recognize and if you have that first dependency level, you implicitly have the second.  If at
 all possible, you want to strive towards the second point.
+
 <!--more-->
 
 Below is an obvious example of a class having a name dependency on another object.  In this case a `Car` object has a
