@@ -84,7 +84,7 @@ This is the crux of *dependency injection*.  You are *injecting* the Engine depe
 
 If we were to draw a new UML diagram, it would look something like this:
 
-![](/car_dependency_2-1.png)
+![](/images/car_dependency_2-1.png)
 
 This is a better scenario mainly because you want to *program to an interface, not to an implementation*.   In ruby,
 there are no hard interfaces.  The interface here is implicit.  The car object is implicitly expecting the engine object
