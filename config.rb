@@ -51,7 +51,8 @@ set :casper, {
     twitter: 'gammons' # Optional
   },
   navigation: {
-    "Home" => "/"
+    "Home" => "/",
+    "About me" => "/about"
   }
 }
 
