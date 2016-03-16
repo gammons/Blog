@@ -1,41 +1,64 @@
 ---
 pageable: true
-layout: page
-cover: bg.jpg
-title: About me
+per_page: 6
+cover: cover.png
+title: Grant Ammons
 ---
 
-%h3 In brief
+%header.main-header{cover}
+  %nav.main-nav.overlay.clearfix
+    - if blog_settings.logo.present?
+      %a.blog-logo{href: home_path}
+        = image_tag blog_settings.logo, alt: blog_settings.name
+  .vertical
+    .main-header-content.inner
+      %h1.page-title Hi, I'm Grant Ammons.
+      %h2.page-description I talk about engineering leadership.
+  %a.scroll-down.icon-arrow-left{href: '#content', data: {offset: '-45'}}
+    %span.hidden Scroll Down
 
-%ul
-  %li
-    VP of Engineering / Partner at
-    %a(href="https://www.pipelinedeals.com") PipelineDeals
-    going on 9 years now
-  %li
-    Cofounder of
-    %a(href="http://www.meetup.com/CTO-School-Philadelphia/") CTO School in Philadelphia.
+%main#content.content{role: :main}
+  %article.post
+    %header.post-header
+      %h1.post-title About me
+    %section.post-content
 
-%h3 Talks + Slides
+      %p I am the VP of Engineering at <a href="https://www.pipelinedeals.com">PipelineDeals</a>, a sales CRM platform.  During my first 3 years with the organization I was the sole engineer, delivering countless features.  I have deep technical knowledge of Ruby, Rails, Mysql, Redis, and many Devops topics.
 
-%ul
-  %li
-    The slides for my
-    %a(href="https://speakerdeck.com/gammons/qa-2-dot-0") QA 2.0 talk that I gave at
-    %a(href="http://www.meetup.com/CTO-School-Philadelphia/") CTO School Philadelphia
-  %li
-    Slides for
-    %a(href="https://speakerdeck.com/gammons/how-bitcoin-works") How Bitcoin works
-    \- a talk I gave at
-    %a(href="http://www.meetup.com/CTO-School-Philadelphia/") CTO School Philadelphia
+      %p During my time as VP of Engineering, I have successfully built and scaled the <a href="https://medium.com/cto-school/ditching-scrum-for-kanban-the-best-decision-we-ve-made-as-a-team-cd1167014a6f?source=latest---------3">software delivery</a>, hiring, deployment, and devops processes.  I currently lead 3 remote teams of engineers from around the US and Poland. My efforts have helped PipelineDeals' achieve high growth and profitability, with millions of dollars in revenue and thousands of customers across the globe, despite PipelineDeals being bootstrapped for 8 years.
 
-%h3 Contact me
+      %p I believe in empowering engineers to do their best work by attracting and hiring amazing people.  I care deeply about fostering a healthy team culture and achieving team happiness.  I embrace remote working and have years of experience making remote teams a success.
 
-%ul
-  %li
-    %a(href="https://twitter.com/gammons") Gammons
-    on twitter
-  %li
-    %a(href="https://github.com/gammons") Github profile
-  %li
-    %a(href="https://www.linkedin.com/in/grant-ammons-70611") Linkedin
+      %p I am the co-organizer of <a href="http://www.meetup.com/CTO-School-Philadelphia/">CTO School in Philadelphia</a>, and <a href="https://medium.com/@gammons">I blog frequently about engineering leadership topics</a>.
+
+      %p I live outside of Philadelphia in an old house with my wife, 2 sons, and 2 dogs.  I am an avid runner and cook.
+
+      %h3 Notable Blog posts
+
+      %ul
+        %li <a href="https://medium.com/cto-school/ditching-scrum-for-kanban-the-best-decision-we-ve-made-as-a-team-cd1167014a6f?source=latest---------3">Ditching Scrum for Kanban - The best decision we've made as a team</a>.  I tell the story about how we made the transition from no process to Scrum, then from Scrum to Kanban.  This has been an extremely popular story on Medium.  It has sparked many interesting discussions, <a href="https://news.ycombinator.com/item?id=10850368">been in the top 5 of Hacker News</a>, and has been the <a href="http://www.readorlisten.com/5">subject of a podcast</a>.
+        %li <a href="https://medium.com/@gammons/4-awesome-ways-to-level-up-your-dev-team-32ab43f90678#.ihij85ci9">4 awesome ways we leveled up as a dev team</a> has been praised and recommended on Medium.  Sandi Metz gave <a href="https://twitter.com/sandimetz/status/687971118616068096">a great recommendation</a> of the article on Twitter.
+
+
+
+      %h3 Talks, Slides and other media
+
+      %ul
+        %li
+          I gave a presentation and fireside chat at <a href="http://www.meetup.com/ctoschool">CTO School NYC</a> about evolving our software development process at PipelineDeals.  The talk is entitled <a href="https://speakerdeck.com/gammons/ditching-scrum-for-kanban">Ditching Scrum for Kanban</a>.  This talk was based upon my <a href="https://medium.com/cto-school/ditching-scrum-for-kanban-the-best-decision-we-ve-made-as-a-team-cd1167014a6f#.9nu7criuh">blog post</a> about the same subject.
+        %li
+          I <a href="https://speakerdeck.com/gammons/qa-2-dot-0">gave a talk about QA</a> at <a href="http://www.meetup.com/CTO-School-Philadelphia/">CTO School Philadelphia</a>.  QA is an interesting subject when it comes to development teams because every team needs it, but they all do it slightly differently.  There are, however some general principles that make up having effective QA in an organization.
+        %li
+          In 2014 I <a href="https://speakerdeck.com/gammons/how-bitcoin-works">gave a talk about how Bitcoin works</a> at <a href="http://www.phillyrb.org/">PhillyRB</a>.
+
+      %h3 Contact me
+
+      %ul
+        %li
+          %a(href="mailto:gammons@gmail.com") Email
+        %li
+          %a(href="https://twitter.com/gammons") Twitter
+        %li
+          %a(href="https://github.com/gammons") Github
+        %li
+          %a(href="https://www.linkedin.com/in/grant-ammons-70611") Linkedin

@@ -39,7 +39,7 @@ set :casper, {
     name: 'Grant Ammons',
     description: 'My thoughts as a developer and engineering leader',
     date_format: '%d %B %Y',
-    navigation: true,
+    navigation: false,
     logo: nil # Optional
   },
   author: {
