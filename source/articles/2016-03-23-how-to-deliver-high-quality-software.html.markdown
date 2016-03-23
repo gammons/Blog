@@ -106,9 +106,3 @@ The other benefit is a staged rollout. You can flip a feature on for your beta t
 ## Your field guide to QA
 
 When I was put in charge of engineering at PipelineDeals, one of my goals set forth by the cofounders was to ensure the delivery of high quality software. That included implementing a solid QA process. When Googling about that, of course, you get slammed with all sorts of different practices and results. The above is what works well for us, as a SaaS product company. Your Mileage May Vary.
----
-title: How to deliver high quality software
-date: 2016-03-23 12:21 UTC
-tags:
----
-
