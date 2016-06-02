@@ -56,10 +56,7 @@ end
 
 The main issue here is that I must mock the `Time` and `Date` classes in order to test my function.  The reason is because my function is fully dependent on today's date.   It is a hard dependency on a global state (in this case `Date.today`).  The output of my function will change based upon the day I run my test!  So I *must* mock `Date.today`.  Right?  Right!?
 
-Well, maybe not!  If we treat today's date as a *dependency* then we can always *reverse* that dependency with good ol' [dependency injection](http://martinfowler.com/articles/dipInTheWild.html).
-
-In this case, if we *inject* the date rather than depending on it, then the function instantly becomes much more testable:
-
+Well, maybe not!  If we treat today's date as a *dependency* then we can always *reverse* that dependency with good ol' [dependency injection](http://martinfowler.com/articles/dipInTheWild.html).  In this case, if we *inject* the date rather than depending on it, then the function instantly becomes much more testable:
 
 ```ruby
 class WeekLibrary
@@ -69,7 +66,7 @@ class WeekLibrary
 end
 ```
 
-Well huh, so the default here is still today's date, which is great for the usability of my class's API, but I can also *inject* the date I want for testing purposes, thus eliminating the need for Timecop or `travel_to` or what have you.
+Well huh, so the default here is still today's date, which is great for the usability of my class's API. But I can also *inject* a specific date, which is great for testing purposes. This completely eliminates the need for Timecop, `travel_to`, or what have you.
 
 Another positive side effect is that my function is now much more generic.  Now, `is_weekday` will tell me if *any* date is a weekday, rather than *today's* date.  It has much more utility.
 
@@ -104,11 +101,11 @@ So what's the TLDR?
 
 **1. Functions that require comparisons to today's date are *dependent* on time.**
 
-Today is variable.  As I write this, today is Wednesday.  But tomorrow, today will be Thursday!  The simple fact that time moves forward makes a function's output *variable* based upon when it is run.  This makes the function's [testability](http://googletesting.blogspot.com/2008/08/by-miko-hevery-so-you-decided-to.html) very difficult, and introduces a reliance on a global state.
+Today is variable.  As I write this, today is Wednesday.  But tomorrow, today will be Thursday!  The simple fact that time (purportedly) moves forward makes a function's output *variable* based upon when it is run.  This makes the function's [testability](http://googletesting.blogspot.com/2008/08/by-miko-hevery-so-you-decided-to.html) very difficult, and introduces a reliance on a global state.
 
 While using libraries to fix the output of `Date.today` is handy, it's not the best solution.
 
 
 **2. Use dependency injection to inject the comparison date rather than relying on today's date.**
 
-If you find yourself relying on a time class in your function and are about to reach for a time mocking library like `travel_to`, think first if it's even necessary.  There's a good chance you don't need it at all!
+If you find yourself relying on a time class in your function and are about to reach for a time mocking library like `travel_to`, try injecting the date into the function first.  There's a good chance your problem will be solved right there!
